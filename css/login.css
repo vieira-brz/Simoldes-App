@@ -50,17 +50,6 @@
 }
 
 
-
-.form {
-    width: 70%;
-    display: flex;
-    margin: 0 auto;
-    margin-top: 0px;
-    place-items: center;
-    justify-content: center;
-    transition: 1.5s ease-in-out;
-}
-
 .form-entrar {
     height: 100%;
 }
@@ -90,69 +79,6 @@
     position: absolute;
     color: var(--verde);
     font-family: 'Material Icons';
-}
-
-.form .input-field {
-    position: relative;
-    margin: 30px 0 0 0;
-    border-bottom: 1px solid var(--cinza-claro);
-}
-.form .input-field input::placeholder { color: transparent; }
-.form .input-field label {
-    left: 0;
-    top: 10px;
-    cursor: text;
-    display: flex;
-    text-align: center;
-    position: absolute;
-    align-items: center;
-    vertical-align: middle;
-    justify-content: center;
-    transition: .15s ease-out;
-}
-.form .input-field input:focus + label span {
-    font-size: 1.2rem;
-}
-span.icon.material-symbols-outlined {
-    margin-right: .45rem;
-}
-.form .input-field input:focus + label span,
-.form .input-field input:not(:placeholder-shown) + label span {
-    font-size: 1rem;
-    color: var(--cinza-medio);
-    margin-right: .35rem;
-}
-.form .input-field input:focus + label,
-.form .input-field input:not(:placeholder-shown) + label {
-    top: -15px;
-    font-size: 13px;
-    color: var(--cinza-medio);
-}
-.form .input-field input {
-    width: calc(100% - 20px);
-    padding: 10px 20px 10px 5px;
-}
-
-.form .btn-action {
-    width: 100%;
-    color: white;
-    cursor: pointer;
-    margin: 26px auto;
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: var(--azul);
-}
-
-.form .link {
-    color: var(--azul);
-    text-align: center;
-    position: relative;
-}
-.form .link > a {
-    color: var(--azul);
-    padding: 0 0 2px 0;
-    text-decoration: none;
-    border-bottom: 1px solid;
 }
 
 .form.form-entrar.hide {
