@@ -255,3 +255,28 @@ span.icon.material-symbols-outlined {
     width: calc(100% - 20px);
     padding: 10px 20px 10px 5px;
 }
+
+
+.form .input-field select { 
+    background: none;
+}
+.form .input-field select::placeholder { color: transparent; }
+.form .input-field select:focus + label span {
+    font-size: 1.2rem;
+}
+.form .input-field select:focus + label span,
+.form .input-field select:not(:placeholder-shown) + label span {
+    font-size: 1rem;
+    color: var(--cinza-medio);
+    margin-right: .35rem;
+}
+.form .input-field select:focus + label,
+.form .input-field select:not(:placeholder-shown) + label {
+    top: -15px;
+    font-size: 13px;
+    color: var(--cinza-medio);
+}
+.form .input-field select {
+    width: calc(100% - 20px);
+    padding: 10px 20px 10px 5px;
+}

@@ -26,13 +26,17 @@
         <div class="form">
             <form>  
                 <div class="input-field">
-                    <input placeholder="Deseja vale transporte?" 
-                           id="cadastrar-nome" 
-                           type="text"
-                           name="senha" 
-                           autocomplete="off"
-                    />
-                    <label for="cadastrar-nome">
+                    <select
+                        placeholder="Deseja vale transporte?" 
+                        id="vale-transporte" 
+                        type="text"
+                        name="transporte" 
+                        autocomplete="off"
+                    >
+                        <option value="S">Sim</option>
+                        <option value="N" selected>Não</option>
+                    </select>
+                    <label for="vale-transporte">
                         <span class="icon material-symbols-outlined">
                             airport_shuttle
                         </span>
@@ -40,13 +44,16 @@
                     </label>
                 </div>
                 <div class="input-field">
-                    <input placeholder="Deseja plano odontológico?" 
-                           id="cadastrar-cargo" 
+                    <select placeholder="Deseja plano odontológico?" 
+                           id="plano-odonto" 
                            type="text"
-                           name="senha" 
+                           name="odonto" 
                            autocomplete="off"
-                    />
-                    <label for="cadastrar-cargo">
+                    >
+                        <option value="S">Sim</option>
+                        <option value="N" selected>Não</option>
+                    </select>
+                    <label for="plano-odonto">
                         <span class="icon material-symbols-outlined">
                             dentistry
                         </span>
@@ -54,13 +61,16 @@
                     </label>
                 </div>
                 <div class="input-field">
-                    <input placeholder="Deseja plano de saúde" 
-                           id="cadastrar-matricula" 
+                    <select placeholder="Deseja plano de saúde" 
+                           id="plano-saude" 
                            type="text"
-                           name="matricula" 
+                           name="saude" 
                            autocomplete="off"
-                    />
-                    <label for="cadastrar-matricula">
+                        >
+                        <option value="S">Sim</option>
+                        <option value="N" selected>Não</option>
+                    </select>
+                    <label for="plano-saude">
                         <span class="icon material-symbols-outlined">
                             medication_liquid
                         </span>
@@ -69,12 +79,13 @@
                 </div>
                 <div class="input-field">
                     <input placeholder="Deixe suas observações..." 
-                           id="cadastrar-senha" 
+                           id="comentario" 
                            type="text"
-                           name="senha" 
+                           name="obs" 
                            autocomplete="off"
+                           maxlength="100"
                     />
-                    <label for="cadastrar-senha">
+                    <label for="comentario">
                         <span class="icon material-symbols-outlined">
                             create
                         </span>
