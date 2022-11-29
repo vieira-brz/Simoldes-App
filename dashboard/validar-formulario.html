@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="../css/validar-formulario.css"/>
+    <script src="../js/index.js"></script>
+    <title>Simoldes | Formulário</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="profile off-bg left">
+            <div class="image">
+                <img src="../img/profile.png" alt="Imagem de Perfil...">
+            </div>
+            <div class="infos">
+                <p class="nome">Nome do colaborador</p>
+                <p class="cargo">Dev | Master</p>
+            </div>
+        </div>
+
+        <center class="sem-dados">
+            <img src="../img/validar.png" alt="Pessoas olhando tela" style="width:300px">
+            <br> <br>
+            <h3>Sem dados aqui...</h3>
+        </center>
+        
+        <div class="form none">
+            <table>
+                <thead>
+                    <th>Funcionário</th>
+                    <th>Vale Transporte</th>
+                    <th>Plano Odontológico</th>
+                    <th>Plano de Saúde</th>
+                    <th>Observações</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0909 - Aldemir Macedo</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Não</td>
+                        <td>Não gosto da empresa simoldes indústria</td>
+                        <td>
+                            <button class="btn btn-verde" name="accept">
+                                <span class="material-icons">
+                                    check
+                                </span>
+                                Validar
+                            </button>
+                            <button class="btn btn-vermelho" name="decline">
+                                <span class="material-icons">
+                                    close
+                                </span>
+                                Remover
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+
+        <span class="toggler voltar">
+            <a name="toggler" href="./home.html">
+                Voltar
+            </a>
+        </span>
+    </div>
+</body>
+</html>

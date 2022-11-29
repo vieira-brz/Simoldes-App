@@ -7,7 +7,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="../css/home.css"/>
-    <script src="../js/index.js"></script>
+    
+    <!-- ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="../js/jquery.js"></script>
+    <script src="../js/alert.js"></script>
+    <script src="../js/home.js"></script>
     <title>Simoldes | Home</title>
 </head>
 <body>
@@ -24,20 +31,20 @@
         </div>
 
         <section class="choose">
-            <a class="box" href="#">
+            <a class="box graficos">
                 <img src="../img/graficos.png" 
                     alt="Desenho de pessoas mexendo em um gráfico."
                 />
                 <p>Gerenciamento<br>dos Gráficos</p>
             </a>
-            <a class="box" href="#">
+            <a class="box desktop_mobile">
                 <img 
                     src="../img/compatibilidade.png"
                     alt="Desenho de desktop e mobile."
                 />
                 <p>Compatibilidade<br>desktop | mobile</p>
             </a>
-            <a class="box" href="#">
+            <a class="box suporte">
                 <img 
                     src="../img/suporte.png" 
                     alt="Desenho de pessoas construindo um app."
@@ -55,13 +62,13 @@
                 uma experiência única e íncrivel no trabalho!
             </p>
             <div class="option-cards">
-                <a class="card" href="#">
+                <a class="card" href="./formulario.html">
                     <p>Preencher Formulário</p>
                     <img src="../img/preencher.png" 
                         alt="Desenho de pessoas preenchendo formulário."
                     />
                 </a>
-                <a class="card" href="#">
+                <a class="card" href="./validar-formulario.html">
                     <p>Validar Formulário</p>
                     <img src="../img/validar.png" 
                         alt="Desenho de pessoas validando formulário."
@@ -82,7 +89,7 @@
                     e seus processos acessando o link a 
                     seguir.
                 </p>
-                <button>Acessar</button>
+                <a href="https://www.simoldes.com/" target="_blank">Acessar</a>
             </div>
         </section>
 
@@ -98,12 +105,12 @@
                         alt="Ícone do WhatsApp."
                     />
                 </a>
-                <a class="img">
+                <a class="img" href="https://br.linkedin.com/company/simoldes-plasticos-brasil-ltda" target="_blank">
                     <img src="../img/linkedin.png" 
                         alt="Ícone do LinkedIn."
                     />
                 </a>
-                <a class="img">
+                <a class="img" href="tel:+554121412200" target="_blank">
                     <img src="../img/phone.png" 
                         alt="Ícone de telefone."
                     />

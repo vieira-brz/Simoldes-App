@@ -1,5 +1,10 @@
 @import './root.css';
 
+.card:hover, .box:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 .choose {
     display: grid;
     padding: 0 25px;
@@ -14,6 +19,7 @@
     text-align: center;
     text-decoration: none;
     flex-direction: column;
+    transition: .2s ease-in-out;
 }
 .choose .box img {
     width: 100%;
@@ -51,6 +57,7 @@
     text-align: center;
     width: calc(89% / 2);
     text-decoration: none;
+    transition: .2s ease-in-out;
 }
 .solicitacoes .option-cards .card p {
     font-weight: bold;
@@ -88,15 +95,17 @@
 .sobre .empresa p {
     font-weight: bold;
     line-height: 1.3rem;
+    margin-bottom: 20px;
     color: var(--branco-abs);
 }
-.sobre .empresa button {
+.sobre .empresa a {
     cursor: pointer;
     margin-top: 17px;
     font-weight: bold;
     padding: 5px 20px;
     color: var(--azul);
     border-radius: 50px;
+    text-decoration: none;
     background: var(--branco-abs);
 }
 

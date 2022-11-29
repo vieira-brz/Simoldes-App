@@ -9,11 +9,17 @@ html {
     --azul50: #59A8FF50;
     --azul30: #59A8FF50;
     --verde: #00ed00;
+    --verde70: #00ed0070;
     --verde50: #00ed0050;
     --verde30: #00ed0030;
+    --vermelho: #ff0000;
+    --vermelho70: #ff000070;
+    --vermelho50: #ff000050;
+    --vermelho30: #ff000030;
     --cinza: #434343;
     --cinza-medio: #43434385;
     --cinza-claro: #43434350;
+    --cinza-light: #43434320;
     --preto: #141414;
     --preto-abs: #141414;
     --fundo: #FFFFFF;
@@ -26,6 +32,10 @@ html {
 html.dark {
     --branco: #3f3f3d;
     --preto: #ffffff;
+    --cinza: #d5d5d5;
+    --cinza-medio: #b0b0b085;
+    --cinza-light: #ffffff20;
+    --shadow: 0 0 10px #a1a1a150;
 }
 
 * {
@@ -45,6 +55,10 @@ body {
 
 .none {
     display: none !important;
+}
+
+.swal-text {
+    text-align: center;
 }
 
 
@@ -155,6 +169,46 @@ body {
     border: none;
     color: var(--cinza);
 }
+
+.btn {
+    color: white;
+    cursor: pointer;
+    font-size: .85rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    align-items: center;
+    display: inline-flex;
+    transition: .1s ease-in-out;
+}
+.btn .material-icons {
+    color: inherit;
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+.btn-verde {
+    background: var(--verde70);
+}
+.btn-verde:hover {
+    background: var(--verde);
+}
+.btn-vermelho {
+    background: var(--vermelho70);
+}
+.btn-vermelho:hover {
+    background: var(--vermelho);
+}
+
+/*
+--azul30: #59A8FF50;
+    --verde: #00ed00;
+    --verde50: #00ed0050;
+    --verde30: #00ed0030;
+    --vermelho: #ff0000;
+    --vermelho50: #ff000050;
+    --vermelho30: #ff000030;*/
+
+
 
 
 /* ======= */

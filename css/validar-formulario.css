@@ -40,5 +40,33 @@
 }
 
 .form {
-    height: calc(100% - 35%);
+    width: 98%;
+    overflow: auto;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 4px;
+    max-height: calc(100% - 35%);
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+table thead {
+    background-color: var(--branco);
+}
+table thead th {
+    font-size: .85rem;
+    text-align: start;
+    padding: .5rem .7rem;
+    color: var(--cinza-medio);
+    border-bottom: 1px solid var(--cinza-light);
+}
+table tbody tr + tr {
+    border: 1px solid red;
+}
+table tbody td {
+    font-size: .9rem;
+    padding: .5rem .7rem;
 }
