@@ -1,6 +1,6 @@
 <?php
 
-include_once dirname().'/models/Funcionarios.php';
+include_once explode('/controllers', __DIR__)[0].'/models/Funcionarios.php';
 
 $funcionarios = new Funcionario();
 

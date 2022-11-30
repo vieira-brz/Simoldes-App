@@ -1,6 +1,6 @@
 <?php
 
-include_once dirname().'/config/Mysql.php';
+include_once explode('/models', __DIR__)[0].'/config/Mysql.php';
 
 class Plano_Vale extends Mysql {
 
