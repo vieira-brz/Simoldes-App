@@ -66,6 +66,7 @@
 .solicitacoes .option-cards .card img {
     width: 100%;
     height: 100%;
+    max-width: 325px;
     border-radius: 5px;
     box-shadow: var(--shadow);
 }
@@ -146,4 +147,39 @@ iframe {
     margin-top: 30px;
     font-size: .7rem;
     color: var(--branco-abs);
+}
+
+
+
+@media (min-width: 800px) {
+
+    .desktop-grid {
+        display: flex;
+        margin-bottom: -80px;
+        justify-content: space-between;
+    }
+
+    .choose {
+        display: flex;
+        flex-direction: column;
+    }
+    .choose .box p br {
+        display: none;
+    }
+    .choose .box:nth-child(1) {
+        margin-bottom: 40px;
+    }
+    .choose .box:nth-child(2) {
+        margin: 0;
+    }
+    .choose .box:nth-child(3) {
+        margin-top: 20px;
+    }
+
+    .solicitacoes {
+        margin-top: 60px;
+    }
+    .solicitacoes .subtitle {
+        margin: 35px 0 65px 0;
+    }
 }
