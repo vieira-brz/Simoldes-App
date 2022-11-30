@@ -12,7 +12,7 @@ class Mysql
   
   protected function __construct()
   {
-    $db = parse_ini_file('./config/mysql.ini');
+    $db = parse_ini_file('./host.ini');
 
     $this->servername = $db["host"];
     $this->username = $db["user"];

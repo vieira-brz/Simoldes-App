@@ -9,7 +9,8 @@ create table simoldes.funcionarios (
     NOME VARCHAR(80) NOT NULL,
     CARGO VARCHAR(80) NOT NULL,
     SENHA VARCHAR(50) NOT NULL,
-    PALAVRA VARCHAR(50) NOT NULL
+    PALAVRA VARCHAR(50) NOT NULL,
+    ACESSO VARCHAR(10) DEFAULT 'PADRAO'
 );
 
 /* Tudo da tabela */
