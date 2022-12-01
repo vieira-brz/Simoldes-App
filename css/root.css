@@ -280,3 +280,40 @@ span.icon.material-symbols-outlined {
     width: calc(100% - 20px);
     padding: 10px 20px 10px 5px;
 }
+
+
+/* ========== */
+/* Botão Sair */
+/* ========== */
+
+span[name="sair"] {
+    z-index: 999;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    background: var(--vermelho);
+    transition: .2s ease-in-out;
+}
+span[name="sair"]:hover {
+    transform: scale(1.1);
+}
+span[name="sair"].tl {
+    top: 10px;
+    left: 10px;
+}
+span[name="sair"].tr {
+    top: 10px;
+    right: 10px;
+}
+span[name="sair"].bl {
+    left: 10px;
+    bottom: 10px;
+}
+span[name="sair"].br {
+    right: 10px;
+    bottom: 10px;
+}

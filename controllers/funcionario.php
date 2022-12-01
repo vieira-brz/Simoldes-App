@@ -79,6 +79,10 @@ switch ($control)
     case 'get_session':
         echo json_encode($_SESSION[session_id()]);
     break;
+
+    case 'get_out_session':
+        unset($_SESSION);
+    break;
    
     default:
         echo 'Erro: Nenhum controle definido!';

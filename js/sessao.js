@@ -1,8 +1,5 @@
 $(document).ready(function(e) {
 
-    var a = 0;
-    /* 
-
     $.post('../controllers/funcionario.php', { control: 'get_session' }, function(response)
     {
         if (response == '' || response == 'null')
@@ -17,6 +14,15 @@ $(document).ready(function(e) {
             $('.profile .infos .cargo').html(`${ json.cargo } | ${ json.acesso }`);
         }
     });
-    
-    */
+
+
+    // Sair
+    //  
+    $('[name="sair"]').click(function(e) {
+
+        $.post('../controllers/funcionario.php', { control: 'get_out_session' }, function(response)
+        {
+            location.reload();
+        });
+    });
 });
