@@ -6,7 +6,7 @@ class Plano_Vale extends Mysql {
 
     private $mysql;
     private $database;
-    private $table = 'teste.plano_vale';
+    private $table = 'simoldes.plano_vale';
 
     public function __construct() {
         $this->mysql = Mysql::getInstance();

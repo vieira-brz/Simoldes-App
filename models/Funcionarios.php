@@ -6,7 +6,7 @@ class Funcionario extends Mysql {
 
     private $mysql;
     private $database;
-    private $table = 'teste.funcionarios';
+    private $table = 'simoldes.funcionarios';
 
     public function __construct() {
         $this->mysql = Mysql::getInstance();
