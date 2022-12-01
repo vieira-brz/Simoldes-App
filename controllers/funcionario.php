@@ -1,7 +1,6 @@
 <?php
 
 include_once explode('/controllers', __DIR__)[0].'/models/Funcionarios.php';
-include_once explode('/controllers', __DIR__)[0].'/models/Plano_Vale.php';
 
 $funcionarios = new Funcionario();
 

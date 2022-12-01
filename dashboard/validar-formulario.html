@@ -7,10 +7,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="../css/validar-formulario.css"/>
+       
+    <!-- ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script src="../js/jquery.js"></script>
     <script src="../js/sessao.js"></script>
-    <script src="../js/formulario.js"></script>
-    <title>Simoldes | Formulário</title>
+    <script src="../js/validacao.js"></script>
+    <title>Simoldes | Validar Formulário</title>
 </head>
 <body>
     <div class="container">
@@ -31,7 +36,7 @@
             <h3>Sem dados aqui...</h3>
         </center>
         
-        <div class="form none">
+        <div class="table none">
             <table>
                 <thead>
                     <th>Funcionário</th>
@@ -41,29 +46,7 @@
                     <th>Observações</th>
                     <th>Ações</th>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>0909 - Aldemir Macedo</td>
-                        <td>Sim</td>
-                        <td>Não</td>
-                        <td>Não</td>
-                        <td>Não gosto da empresa simoldes indústria</td>
-                        <td>
-                            <button class="btn btn-verde" name="accept">
-                                <span class="material-icons">
-                                    check
-                                </span>
-                                Validar
-                            </button>
-                            <button class="btn btn-vermelho" name="decline">
-                                <span class="material-icons">
-                                    close
-                                </span>
-                                Remover
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
+                <tbody> </tbody>
             </table>
         </div> 
 

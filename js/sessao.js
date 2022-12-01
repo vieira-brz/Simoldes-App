@@ -1,5 +1,7 @@
 $(document).ready(function(e) {
-   /* 
+
+    var a = 0;
+    /* 
 
     $.post('../controllers/funcionario.php', { control: 'get_session' }, function(response)
     {

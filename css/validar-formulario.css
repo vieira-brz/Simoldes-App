@@ -39,10 +39,10 @@
     background: var(--branco);
 }
 
-.form {
-    width: 98%;
+.table {
+    width: 97%;
+    margin: 20px;
     overflow: auto;
-    margin-top: 20px;
     position: relative;
     border-radius: 4px;
     max-height: calc(100% - 35%);

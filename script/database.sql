@@ -57,3 +57,6 @@ select * from simoldes.plano_vale where MATRICULA = '$matricula' and (STATUS_VAL
 
 /* Tabela funcionarios + planos e vales */
 select * from simoldes.plano_vale as pv inner join simoldes.funcionarios as f on f.MATRICULA = pv.MATRICULA;
+
+/* Atualizar tabela */
+update $this->table SET STATUS_VALIDACAO = 'OK' or VALIDADO = 'N' where ID = '$id';
