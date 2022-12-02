@@ -3,8 +3,8 @@ $(document).ready((e) => {
     const controller = '../controllers/validacao.php';
     const controller_func = '../controllers/funcionario.php';
 
-    $.post(controller, {
-        controller_func: 'get_session'
+    $.post(controller_func, {
+        control: 'get_session'
     }, 
     function(response)
     {
@@ -36,7 +36,7 @@ $(document).ready((e) => {
                     else 
                     {
                         let parsed = JSON.parse(response2);
-                        create_table(parsed);
+                        create_table(parsed, 'PADRAO');
                     }
                 });
             }
@@ -57,7 +57,7 @@ $(document).ready((e) => {
                     else 
                     {
                         let parsed = JSON.parse(response2);
-                        create_table(parsed);
+                        create_table(parsed, 'MASTER');
                     }
                 });
             }  
@@ -73,37 +73,61 @@ $(document).ready((e) => {
 
     // Monta tabela
     // 
-    function create_table(array)
+    function create_table(array, acesso)
     {
         $('.table').removeClass('none');
         $('.sem-dados').addClass('none');
 
         $.each(array, function(index, key)
         {
-            $('.table').find('table > tbody').html();
-            $('.table').find('table > tbody').append(`
-                <tr id="${ key.ID }">
-                    <td>${ key.MATRICULA } - ${ key.NOME }</td>
-                    <td>${ key.VALE_TRANSPORTE }</td>
-                    <td>${ key.PLANO_ODONTOLOGICO }</td>
-                    <td>${ key.PLANO_SAUDE }</td>
-                    <td>${ key.COMENTARIO }</td>
-                    <td>
-                        <button class="btn btn-verde" name="accept">
-                            <span class="material-icons">
-                                check
-                            </span>
-                            Validar
-                        </button>
-                        <button class="btn btn-vermelho" name="decline">
-                            <span class="material-icons">
-                                close
-                            </span>
-                            Negar
-                        </button>
-                    </td>
-                </tr>
-            `);
+            if (acesso != 'MASTER')
+            {
+                if (key.COMENTARIO === '') {
+                    key.COMENTARIO = 'Sem comentários...';
+                }
+
+                let status = key.STATUS_VALIDACAO;
+                status = status === 'NOK' ? 'Aguardando Validação' : `Validado: ${ key.VALIDADO === 'S' ? 'Sim' : 'Não' }`;
+
+                $('.table').find('table > tbody').html();
+                $('.table').find('table > tbody').append(`
+                    <tr id="${ key.ID }">
+                        <td>${ key.MATRICULA } - ${ key.NOME }</td>
+                        <td>${ key.VALE_TRANSPORTE }</td>
+                        <td>${ key.PLANO_ODONTOLOGICO }</td>
+                        <td>${ key.PLANO_SAUDE }</td>
+                        <td>${ key.COMENTARIO }</td>
+                        <td>${ status }</td>
+                    </tr>
+                `);
+            }
+            else 
+            {
+                $('.table').find('table > tbody').html();
+                $('.table').find('table > tbody').append(`
+                    <tr id="${ key.ID }">
+                        <td>${ key.MATRICULA } - ${ key.NOME }</td>
+                        <td>${ key.VALE_TRANSPORTE }</td>
+                        <td>${ key.PLANO_ODONTOLOGICO }</td>
+                        <td>${ key.PLANO_SAUDE }</td>
+                        <td>${ key.COMENTARIO }</td>
+                        <td>
+                            <button class="btn btn-verde" name="accept">
+                                <span class="material-icons">
+                                    check
+                                </span>
+                                Validar
+                            </button>
+                            <button class="btn btn-vermelho" name="decline">
+                                <span class="material-icons">
+                                    close
+                                </span>
+                                Negar
+                            </button>
+                        </td>
+                    </tr>
+                `);
+            }
         });
 
 
@@ -116,17 +140,14 @@ $(document).ready((e) => {
             let id = $(this).closest('tr').attr('id');
 
             $.post(controller, {
-                controller_func: 'accept',
+                control: 'accept',
                 id: id
             }, 
             function(response)
             {
                 if (response == 'OK')
                 {
-                    simoldes.sucesso('Formulário validado com sucesso!');
-                    setTimeout(() => {
-                        location.reload();
-                    }, 3000);
+                    location.reload();
                 }
                 else 
                 {
@@ -147,17 +168,14 @@ $(document).ready((e) => {
             let id = $(this).closest('tr').attr('id');
             
             $.post(controller, {
-                controller_func: 'decline',
+                control: 'decline',
                 id: id
             }, 
             function(response)
             {
                 if (response == 'OK')
                 {
-                    simoldes.sucesso('Formulário recusado com sucesso!');
-                    setTimeout(() => {
-                        location.reload();
-                    }, 3000);
+                    location.reload();
                 }
                 else 
                 {

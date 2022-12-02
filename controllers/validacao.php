@@ -1,7 +1,7 @@
 <?php
 
-include_once explode('/controllers', __DIR__)[0].'/models/Funcionarios.php';
-include_once explode('/controllers', __DIR__)[0].'/models/Plano_Vale.php';
+include_once explode('\controllers', __DIR__)[0].'\models\Funcionarios.php';
+include_once explode('\controllers', __DIR__)[0].'\models\Plano_Vale.php';
 
 $funcionarios = new Funcionario();
 $plano_vale = new Plano_Vale();
@@ -50,7 +50,7 @@ switch ($control)
         
         $request = $plano_vale->accept($id);
 
-        if ($request == 1)
+        if ($request != 0)
         {
             echo 'OK';
         }
@@ -66,7 +66,7 @@ switch ($control)
 
         $request = $plano_vale->decline($id);
 
-        if ($request == 1)
+        if ($request != 0)
         {
             echo 'OK';
         }

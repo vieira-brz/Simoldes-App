@@ -12,7 +12,7 @@ class Mysql
   
   protected function __construct()
   {
-    $db = parse_ini_file('./host.ini');
+    $db = parse_ini_file('host.ini');
 
     $this->servername = $db["host"];
     $this->username = $db["user"];
@@ -35,8 +35,6 @@ class Mysql
 
   public function readDb($query)
   {
-    $query = utf8_decode($query);
-
     if($this->conn != null)
     {
       if($result = $this->conn->query($query))
@@ -52,7 +50,6 @@ class Mysql
 
           $result->close();
 
-          $data = json_encode($data);
           return $data;
         }
         else

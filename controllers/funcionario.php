@@ -1,6 +1,7 @@
 <?php
+session_start();
 
-include_once explode('/controllers', __DIR__)[0].'/models/Funcionarios.php';
+include_once explode('\controllers', __DIR__)[0].'\models\Funcionarios.php';
 
 $funcionarios = new Funcionario();
 
@@ -66,12 +67,8 @@ switch ($control)
 
         $request = $funcionarios->muda_senha($matricula, $palavra, $senha);
 
-        if (is_array($request))
-
-            if (count($request) == 1) 
-                echo 'OK';
-            else 
-                echo 'NOK';
+        if ($request == 1) 
+            echo 'OK';
         else 
             echo 'NOK';
     break;
@@ -81,7 +78,7 @@ switch ($control)
     break;
 
     case 'get_out_session':
-        unset($_SESSION);
+        unset($_SESSION[session_id()]);
     break;
    
     default:

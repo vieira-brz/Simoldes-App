@@ -22,7 +22,7 @@ $(document).ready(function(e) {
 
         $.post('../controllers/funcionario.php', { control: 'get_out_session' }, function(response)
         {
-            location.reload();
+            window.location.href = '../index.html';
         });
     });
 });

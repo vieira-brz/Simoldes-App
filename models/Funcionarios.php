@@ -1,6 +1,6 @@
 <?php
 
-include_once explode('/models', __DIR__)[0].'/config/Mysql.php';
+include_once explode('\models', __DIR__)[0].'\config\Mysql.php';
 
 class Funcionario extends Mysql {
 
@@ -13,7 +13,7 @@ class Funcionario extends Mysql {
     }
 
     public function cadastrar($matricula, $nome, $cargo, $senha, $palavra) {
-        $query = "insert $this->table values ('$matricula', '$nome', '$cargo', md5('$senha'), '$palavra')";
+        $query = "insert $this->table values ('$matricula', '$nome', '$cargo', md5('$senha'), '$palavra', 'PADRAO')";
         return $this->mysql->updateDb($query);
     }
 
@@ -29,13 +29,9 @@ class Funcionario extends Mysql {
         
         if (is_array($request)) 
         {
-            if (count($request) == 1) {
-                $query = "update $this->table SET SENHA = md5('$senha') where MATRICULA = '$matricula'";
-                return $this->mysql->updateDb($query);
-            }
-            else {
-                return 0;
-            }
+            $query = "update $this->table SET SENHA = md5('$senha') where MATRICULA = '$matricula'";
+            $this->mysql->updateDb($query);
+            return 1;
         }
         else {
             return 0;
